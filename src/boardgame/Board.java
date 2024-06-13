@@ -12,22 +12,24 @@ public class Board {
 		pieces = new Piece[rows][colums];
 	}
 
+	//Getters and Setters
 	public int getRows() {
 		return rows;
-	}
-
-	public void setRows(int rows) {
-		this.rows = rows;
 	}
 
 	public int getColums() {
 		return colums;
 	}
 
-	public void setColums(int colums) {
-		this.colums = colums;
+	//Methods
+	
+	public Piece piece(int row,int column) {
+		return pieces[row][column];
 	}
 	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 	
 	
 	
