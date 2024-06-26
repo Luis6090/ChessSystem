@@ -7,7 +7,6 @@ public class Piece {
 	
 	//Constructor
 	public Piece(Board board) {
-		super();
 		this.board = board;
 	}
 
