@@ -32,10 +32,10 @@ public class Rook extends ChessPiece {
 		}
 		
 		//bellow
-		positionAux.setValue(position.getRow() - 1, position.getColumn());
+		positionAux.setValue(position.getRow() + 1, position.getColumn());
 		while(getBoard().positionExists(positionAux) && !getBoard().thereIsAPiece(positionAux)) {
 			mat[positionAux.getRow()][positionAux.getColumn()] = true;
-			positionAux.setRow(positionAux.getRow() - 1);
+			positionAux.setRow(positionAux.getRow() + 1);
 		}
 		if(getBoard().positionExists(positionAux) && isThereOpponentPiece(positionAux)) {
 			mat[positionAux.getRow()][positionAux.getColumn()] = true;
